@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+            module.exports = {
+                theme: {
+                    extend: {
+                       fontFamily: {
+                        'rob': ['"Roboto"', 'sans-serif']
+                       } 
+                    }
+                },
+            }
+    </script>
+</head>
+<body class="font-rob flex gap-x-[45px] items-start bg-[rgba(244,249,248,1)]">
+    <div class="w-[260px] pt-[21px] pb-[16px] pr-[17px]">
+        <div class="flex items-center gap-[15px] ml-[31px] mb-[28px] relative">
+            <div class="w-[29px] h-[35px]">
+                <img class="w-full h-full object-cover" src="./assets/images/aster-news-logo.svg" alt="">
+            </div>
+            <div class="text-[#0768B5] font-bold text-[18px] leading-[21px]">Aster News</div>
+            <a href="#" class="absolute inset-0"></a>
+        </div>
+
+        <div class="flex flex-col text-[#072D4B] text-[15px] leading-[18px] font-normal">
+            <div class="h-[50px] text-[rgba(47,159,248,1)] rounded-r-full flex items-center space-x-[12px] pl-[33px] cursor-pointer bg-[rgba(47,159,248,0.1)]">
+                <div class="flex items-center gap-x-[21px] relative font-bold">
+                    <div class="bg-[rgba(47,159,248,1)] size-[6px] rounded-full absolute left-[-15px]"></div>
+                    <div class="text-[24px]"><i class="fa fa-home"></i></div>
+                    <div class="whitespace-nowrap">Top Stories</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-solid fa-globe"></i></div>
+                    <div class="whitespace-nowrap">Around the World</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa fa-briefcase"></i></div>
+                    <div class="whitespace-nowrap">Business</div>
+                </div>
+            </div>
+            
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="whitespace-nowrap">Health</div>
+                </div>
+            </div>
+            <div class="h-[60px] flex items-center pl-[33px] cursor-pointer border-x-1 border-y-[0.2px] border-[rgba(7,45,75,.6)]">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-solid fa-shield"></i></div>
+                    <div class="whitespace-nowrap">Covid 19</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-regular fa-circle-play"></i></div>
+                    <div class="whitespace-nowrap">Entertainment</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-solid fa-award"></i></div>
+                    <div class="whitespace-nowrap">Sports</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-regular fa-comment"></i></div>
+                    <div class="whitespace-nowrap">Discussion</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-regular fa-bell"></i></div>
+                    <div class="whitespace-nowrap">Notification</div>
+                </div>
+            </div>
+            <div class="h-[50px] flex items-center pl-[33px] cursor-pointer">
+                <div class="flex items-center space-x-[21px]">
+                    <div class="text-[24px]"><i class="fa-solid fa-gear"></i></div>
+                    <div class="whitespace-nowrap">News Feed Settings</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="fixed bottom-3 ml-[16px] text-white rounded-[4px] py-[19px] px-[20px] mt-[120px] w-[227px] h-[123px] bg-[rgba(47,159,248,1)]">
+            <div class="flex gap-x-[15px] items-center mb-[11px]">
+                <span><i class="text-[24px] fa-solid fa-gift"></i></span>
+                <span class="whitespace-nowrap font-normal text-[15px] leading-[18px]">Subscribe to Premium</span>
+            </div>
+            <div class="flex gap-x-[22px]">
+                <span class="font-normal text-[15px] leading-[18px]"><b class="text-[30px] leading-[35px]">$8</b>/m</span>
+                <button class="py-[10px] px-[27px] bg-[rgba(7,104,181,1)] rounded-[4px] text-[15px] leading-[18px]">Upgrade</button>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+    <div class="flex-1 mt-[15px] mb-[28px]">
+        <div class="flex items-center h-[46px] justify-between gap-x-[20px] mb-[39px]">
+            <div class="flex-1 h-full bg-[#ECF5F8] relative rounded-[4px] p-[14px]">
+                <input class="w-full h-full bg-transparent outline-none placeholder-[rgba(7,45,75,0.3)] text-[15px] font-rob leading-[18px] flex items-center" type="text" placeholder="Search for news..">
+                <div class="absolute right-[12px] top-[14px] rgba(7,45,75,1)"><i class="text-[18px] fa fa-search"></i></div>
+            </div>
+            <div class="border-[0.2px] border-[#072D4B] text-[#072D4B] rounded-[4px] py-[14px] w-[256px] h-full pl-[15px] pr-[7px] flex justify-between items-center">
+                <div class="leading-[18px] text-[15px]">Latest news on <span class="font-medium text-[#2F9FF8]">Covid-19</span></div>
+                <div><i class="text-[20px] fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+
+        <div class="text-[#072D4B] font-bold text-[20px] leading-[23px] mb-[22px]">Top Stories for you</div>
+        <div class="flex justify-between items-center text-[#072D4B] mb-[24px]">
+            <div class="flex items-center gap-x-[10px] text-[15px] leading-[18px] mr-[10px]">
+                <div class="rounded-full px-[17px] h-[30px] flex items-center bg-[#2F9FF8] shadow">All</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">Android</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">Cricket</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">iPhone</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">Google</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">Nano Technology</div>
+                <div class="rounded-full px-[17px] h-[30px] bg-white flex items-center shadow">Mental Health</div>
+            </div>
+            <div><i class="text-[24px] fa-solid fa-ellipsis"></i></div>
+        </div>
+
+        <div class="mb-[40px]">
+            <div class="flex flex-1">
+                <div class="flex items-center py-[17px] pr-[15px] pl-[23px] gap-x-[49px] bg-white rounded-[4px] shadow mb-[20px]">
+                    <div class="flex-1">
+                        <div class="mb-[10px] text-[#072D4B] font-medium text-[17px] leading-[20px]">Samsung Galaxy F22 launched in India: Price, features, other details</div>
+                        <div class="mb-[17px] text-[rgba(7,45,75,.6)] text-[14px] leading-[22px]">
+                            Samsung Galaxy F22 has been launched in India. The new smartphone has been priced in the mid-range segment. The new smartphone is powered by a MediaTek chipset and features a high refresh rate AMOLED display.
+                        </div>
+                        <div class="flex items-center">
+                            <div class="mr-[9px] text-[12px] leading-[22px] text-[rgba(7,45,75,.4)]">The Mint</div>
+                            <div class="bg-[#2F9FF8] size-[3px] rounded-full mr-[8px]"></div>
+                            <div class="mr-[82px] text-[12px] leading-[22px] text-[rgba(7,45,75,.4)]">15 mins ago</div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[26px] text-[#0768B5]">
+                                <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                <span>Read Later</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[172px] h-[130px]">
+                        <img class="w-full h-full rounded-[4px] object-cover" src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cGhvbmV8ZW58MHx8MHx8fDA%3D" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-x-[19px] gap-y-[20px]">
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="flex items-center space-x-[18px] mb-[8px]">
+                        <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                            <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Battlegrounds Mobile India iOS release date</div>
+                            <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">The reason behind their disappointment is that iPhone users have been..</div>
+                        </div>
+                        <div class="w-[134px] h-[132px]">
+                            <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1557461762-e08315322e3d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmF0dGxlZ3JvdW5kfGVufDB8fDB8fHww" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">Sport Biz</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>42 mins ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="flex items-center space-x-[18px] mb-[8px]">
+                        <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                            <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Instagram working on ‘Exclusive Stories’ for subscribers</div>
+                            <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">Instagram could be jumping on the paid subscription..</div>
+                        </div>
+                        <div class="w-[134px] h-[132px]">
+                            <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1611262588024-d12430b98920?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW5zdGFncmFtfGVufDB8fDB8fHww" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">The Mint</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>52 mins ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Petrol, diesel prices -  July 6: Fuel prices unchanged after touching record high</div>
+                    <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)] mb-[20px]">The price of petrol remained unchanged on July 6 after reaching a new record high on the previous day, according to a price notification by state-owned..</div>
+                        
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">Radar 52</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>1 hour ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="flex items-center space-x-[18px] mb-[8px]">
+                        <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                            <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Android smartphone users alert! Remove these 9 apps now</div>
+                            <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">Stealer trojans were spread as harmless software..</div>
+                        </div>
+                        <div class="w-[134px] h-[132px]">
+                            <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YW5kcm9pZHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">Live Mint</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>2 hours ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="flex items-center space-x-[18px] mb-[8px]">
+                        <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                            <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">How to install Windows 11 on almost any unsupported PC</div>
+                            <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">Microsoft is allowing some unsupported computers..</div>
+                        </div>
+                        <div class="w-[134px] h-[132px]">
+                            <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d2luZG93cyUyMDExfGVufDB8fDB8fHww" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">Tech Mint</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>3 hours ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                    <div class="flex items-center space-x-[18px] mb-[8px]">
+                        <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                            <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">This charging feature from Android phones may come to iPhone 13</div>
+                            <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">You will always find a set of people who will say that..</div>
+                        </div>
+                        <div class="w-[134px] h-[132px]">
+                            <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1631037561126-0782ab7e666e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhcmdpbmclMjBwaG9uZXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                                <div class="mr-[9px]">Live Mint</div>
+                                <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                                <div>5 hours ago</div>
+                        </div>
+                        <div class="flex items-center">
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                    <span>Share</span>
+                                </div>
+                                <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                    <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                    <span>Read Later</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between text-[#072D4B] mb-[12px]">
+            <div class="flex items-center">
+                <div class="size-[24px] mr-[13px]"><img class="size-full object-cover" src="./assets/images/feather.svg" alt=""></div>
+                <span class="text-[15px] font-bold leading-[18px]">Creators you should follow</span>
+            </div>
+            <div class="flex items-center gap-x-[20px]">
+                <div><i class="text-[rgba(7,45,75,.2)] text-[20px] fa-solid fa-arrow-left"></i></div>
+                <div><i class="text-[20px] fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+        <div class="flex items-center justify-between gap-x-[15px] mb-[44px]">
+            <div class="bg-white rounded-[4px] p-[13px] w-[142px] h-[185px] shadow text-[rgba(7,45,75,1)] text-center">
+                <div class="mb-[7px] size-[70px] inline-flex justify-center"><img class="size-full rounded-full object-cover" src="https://images.unsplash.com/photo-1623184663110-89ba5b565eb6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFuJTIwc21pbGluZ3xlbnwwfHwwfHx8MA%3D%3D" alt=""></div>
+                <div class="font-medium text-[14px] leading-[24px]">Shan Teylor</div>
+                <div class="text-[12px] text-[rgba(7,45,75,.4)] leading-[22px] mb-[7px]">Tech Mint</div>
+                <button class="bg-[#2F9FF8] text-white py-[7px] px-[33px] rounded-[4px] text-[15px] leading-[18px]">Follow</button>
+            </div>
+            <div class="bg-white rounded-[4px] p-[13px] w-[142px] h-[185px] shadow text-[rgba(7,45,75,1)] text-center">
+                <div class="mb-[7px] size-[70px] inline-flex justify-center"><img class="size-full rounded-full object-cover" src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdvbWFuJTIwc21pbGluZyUyMGZha2V8ZW58MHx8MHx8fDA%3D" alt=""></div>
+                <div class="font-medium text-[14px] leading-[24px]">Mary Angela</div>
+                <div class="text-[12px] text-[rgba(7,45,75,.4)] leading-[22px] mb-[7px]">Live Mint</div>
+                <button class="bg-[#2F9FF8] text-white py-[7px] px-[33px] rounded-[4px] text-[15px] leading-[18px]">Follow</button>
+            </div>
+            <div class="bg-white rounded-[4px] p-[13px] w-[142px] h-[185px] shadow text-[rgba(7,45,75,1)] text-center">
+                <div class="mb-[7px] size-[70px] inline-flex justify-center"><img class="size-full rounded-full object-cover" src="https://images.unsplash.com/photo-1544168190-79c17527004f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YXNpYW4lMjBtYW58ZW58MHx8MHx8fDA%3D" alt=""></div>
+                <div class="font-medium text-[14px] leading-[24px]">Kyon Cho Chi</div>
+                <div class="text-[12px] text-[rgba(7,45,75,.4)] leading-[22px] mb-[7px]">Bizz Daily</div>
+                <button class="bg-[#2F9FF8] text-white py-[7px] px-[33px] rounded-[4px] text-[15px] leading-[18px]">Follow</button>
+            </div>
+            <div class="bg-white rounded-[4px] p-[13px] w-[142px] h-[185px] shadow text-[rgba(7,45,75,1)] text-center">
+                <div class="mb-[7px] size-[70px] inline-flex justify-center"><img class="size-full rounded-full object-cover" src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFuJTIwbG9va2luZyUyMGxpa2UlMjBzZXJpYWwlMjBraWxsZXJ8ZW58MHx8MHx8fDA%3D" alt=""></div>
+                <div class="font-medium text-[14px] leading-[24px]">Paul Livingstone</div>
+                <div class="text-[12px] text-[rgba(7,45,75,.4)] leading-[22px] mb-[7px]">Sport Biz</div>
+                <button class="bg-[#2F9FF8] text-white py-[7px] px-[33px] rounded-[4px] text-[15px] leading-[18px]">Follow</button>
+            </div>
+            <div class="bg-white rounded-[4px] p-[13px] w-[142px] h-[185px] shadow text-[rgba(7,45,75,1)] text-center">
+                <div class="mb-[7px] size-[70px] inline-flex justify-center"><img class="size-full rounded-full object-cover" src="https://images.unsplash.com/photo-1440589473619-3cde28941638?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHdvbWFuJTIwd2l0aCUyMGhpZGphYnxlbnwwfHwwfHx8MA%3D%3D" alt=""></div>
+                <div class="font-medium text-[14px] leading-[24px]">Sara Jay</div>
+                <div class="text-[12px] text-[rgba(7,45,75,.4)] leading-[22px] mb-[7px]">Radar 52</div>
+                <button class="bg-[#2F9FF8] text-white py-[7px] px-[33px] rounded-[4px] text-[15px] leading-[18px]">Follow</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-x-[19px] gap-y-[20px] mb-[44px]">
+            <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                <div class="flex items-center space-x-[18px] mb-[8px]">
+                    <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                        <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">INDvENG Tests to be played in front of crowd</div>
+                        <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">The 5-Test series between India & England is set to be played in front of packed..</div>
+                    </div>
+                    <div class="w-[134px] h-[132px]">
+                        <img class="w-full h-full object-cover rounded-[4px]" src="https://plus.unsplash.com/premium_photo-1681823111313-60e82cbd7f32?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGVuZ2luZWVyJTIwbWVufGVufDB8fDB8fHww" alt="">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                            <div class="mr-[9px]">Sport Biz</div>
+                            <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                            <div>7 hours ago</div>
+                    </div>
+                    <div class="flex items-center">
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                <span>Read Later</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                <div class="flex items-center space-x-[18px] mb-[8px]">
+                    <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                        <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">The 10 Coolest Wearable Tech Gadgets Of 2021 (So Far)</div>
+                        <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">Driven by demand for connected earbuds and a..</div>
+                    </div>
+                    <div class="w-[134px] h-[132px]">
+                        <img class="w-full h-full object-cover rounded-[4px]" src="https://plus.unsplash.com/premium_photo-1681147547346-2d73c90988d8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8d2VhcmFibGUlMjB0ZWNoJTIwZ2FkZ2V0fGVufDB8fDB8fHww" alt="">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                            <div class="mr-[9px]">The Mint</div>
+                            <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                            <div>7 hours ago</div>
+                    </div>
+                    <div class="flex items-center">
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                <span>Read Later</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Biden's cold response to Afghanistan's collapse to have far consequences</div>
+                <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)] mb-[20px]">When US President Joe Biden chose in April to withdraw all American forces from Afghanistan by September, we were among those who judged..</div>
+                    
+                <div class="flex justify-between items-center">
+                    <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                            <div class="mr-[9px]">Radar 52</div>
+                            <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                            <div>8 hours ago</div>
+                    </div>
+                    <div class="flex items-center">
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                <span>Read Later</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bg-white shadow rounded-[4px] w-[full] h-[191px] py-[16px] pr-[17px] pl-[23px]">
+                <div class="flex items-center space-x-[18px] mb-[8px]">
+                    <div class="flex-1 text-[#072D4B] w-[183px] h-[123px] overflow-hidden break-words text-ellipsis">
+                        <div class="mb-[9px] font-medium w-full w-full  text-[17px] leading-[24px]">Hardik Pandya 'is bowling and it is a very good sign' - Suryakumar</div>
+                        <div class="leading-[22px] text-[14px] w-full  text-[rgba(7,45,75,.6)]">I think that the team management and Hardik..</div>
+                    </div>
+                    <div class="w-[134px] h-[132px]">
+                        <img class="w-full h-full object-cover rounded-[4px]" src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vdGJhbGxlcnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div class="flex text-[12px] leading-[22px] items-center text-[rgba(7,45,75,.4)]">
+                            <div class="mr-[9px]">Cric Mint</div>
+                            <div class="mr-[8px] bg-[#2F9FF8] size-[3px] rounded-[100%]"></div>
+                            <div>9 hours ago</div>
+                    </div>
+                    <div class="flex items-center">
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] mr-[25px] text-[#0768B5]">
+                                <i class="text-[16px] fa-solid fa-arrow-up-from-bracket"></i>
+                                <span>Share</span>
+                            </div>
+                            <div class="flex text-[12px] leading-[22px] items-center gap-x-[8px] text-[#0768B5]">
+                                <i class="text-[16px] fa-brands fa-get-pocket"></i>
+                                <span>Read Later</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mb-[79px]">
+            <button class="border-[0.2px] border-[#072D4B] rounded-[4px] py-[10px] px-[21px] text-[#072D4B] text-[15px] leading-[18px] text-center">Show More</button>
+        </div>
+
+        <div class="bg-[rgba(7,45,75,.4)] w-full h-[0.1px] mb-[23px]"></div>
+        <div class="text-[rgba(7,45,75,.4)] text-[12px] leading-[22px] flex justify-between items-center mb-[29px]">
+            <div>© Aster News, 2022</div>
+            <div class="flex items-center gap-x-[38px]">
+                <div>Privacy Policy</div>
+                <div>Terms of Service</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="w-[285px] py-[26px] pr-[34px]">
+
+        <div class="flex items-center gap-x-[13px] justify-end text-[#072D4B] mb-[95px]">
+            <div><i class="text-[24px] fa-regular fa-user"></i></div>
+            <div class="text-[15px] leading-[18px]">
+                <select name="profile" class="outline-none bg-transparent">
+                    <option value="profile">My Profile</option>
+                    <option value="profile">Settings</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="bg-white shadow w-full py-[14px] px-[15px] rounded-[4px] shadow mb-[15px]">
+            <div class="pb-[9px] flex justify-between items-center text-[#072D4B] border-b-[0.2px] border-[rgba(7,45,75,.6)] mb-[15px]">
+                <div class="text-[15px] leading-[18px]">Coimbatore, Tamil Nadu</div>
+                <div><i class="text-[18px] fa-solid fa-crosshairs"></i></div>
+            </div>
+            <div class="flex justify-between items-center mb-[15px]">
+                <div class="text-[#072D4B]">
+                    <div class="text-[15px] leading-[18px] mb-[7px]">Sunny</div>
+                    <div class="text-[26px] font-bold leading-[30px]">31°c</div>
+                </div>
+                <div class="size-[52px]"><img class="size-full object-cover" src="./assets/images/sun.svg" alt=""></div>
+            </div>
+            <div class="text-[12px] leading-[14px]">
+                <span class="text-[#072D4B] mr-[23px]">Celsius</span>
+                <span class="text-[rgba(7,45,75,.3)]">Fahrenheit</span>
+            </div>
+        </div>
+
+        <div class="mb-[15px] bg-white rounded-[4px] leading-[18px] pt-[13px] px-[15px] pb-[16px] shadow">
+            <div class="flex items-center gap-x-[12px] mb-[9px]">
+                <div class="size-[24px]"><img class="size-full object-cover" src="./assets/images/feather.svg" alt=""></div>
+                <div class="text-[#072D4B] text-[15px]">Become a Story Writer</div>
+            </div>
+            <div class="flex items-center justify-between">
+                <div class="text-[rgba(7,45,75,.6)] text-[12px]">Contribute stories and start earning.</div>
+                <button class="whitespace-nowrap rounded-[4px] text-[15px] border-[.2px] border-[#2F9FF8] text-[#2F9FF8] px-[17px] py-[10px]">Know More</button>
+            </div>
+        </div>
+
+        <div class="bg-white pt-[11px] px-[15px] pb-[16px] rounded-[4px] shadow mb-[15px]">
+            <div class="flex mb-[13px] items-center justify-between pb-[6px] border-b-[rgba(7,45,75,.6)] border-b-[.2px]">
+                <div class="flex items-center gap-x-[14px]">
+                    <div><i class="fa-regular fa-file-lines"></i></div>
+                    <div>Quick Bytes</div>
+                </div>
+                <div class="flex items-center gap-x-[10px]">
+                    <div class="bg-[rgba(47,159,248,.2)] px-[10px] py-[8px] size-[24px] rounded-full flex items-center justify-center"><i class="text-white fa-solid fa-chevron-left"></i></div>
+                    <div class="bg-[#2F9FF8] px-[10px] py-[8px] size-[24px] rounded-full flex items-center justify-center"><i class="fa-solid text-white fa-chevron-right"></i></div>
+                </div>
+            </div>
+            <div class="text-[rgba(7,45,75,.6)] text-[12px] leading-[20px] mb-[9px]">
+                The price of petrol remained unchanged on July 6 after reaching a new record high on the previous day, according to a price notification by state-owned fuel retailers. The diesel price remained stable for the second consecutive day. <br><br> The increase on July 5, 35th in two months, took the petrol price in Delhi closer to Rs 100 per litre-mark. The petrol price in the national capital soared to Rs 99.9 a litre and diesel was priced at Rs 89.4 per litre, according to Bharat Petroleum's price listing.
+            </div>
+            <div class="flex justify-center">
+                <div class="flex items-center gap-x-[8px]">
+                    <div class="bg-[#2F9FF8] size-[4px] rounded-full"></div>
+                    <div class="bg-[rgba(7,45,75,.3)] size-[3px] rounded-full"></div>
+                    <div class="bg-[rgba(7,45,75,.3)] size-[3px] rounded-full"></div>
+                    <div class="bg-[rgba(7,45,75,.3)] size-[3px] rounded-full"></div>
+                    <div class="bg-[rgba(7,45,75,.3)] size-[3px] rounded-full"></div>
+                    <div class="bg-[rgba(7,45,75,.3)] size-[3px] rounded-full"></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="bg-white pt-[19px] pr-[21px] pb-[23px] pl-[20px] shadow rounded-[4px]">
+            <div class="text-[#072D4B] text-[15px] leading-[18px] font-normal mb-[12px]">Subscribe to our newsletter</div>
+            
+            <div class="bg-[#F4F9F8] pt-[11px] pb-[9px] border-[#072D4B] border-[0.1px] rounded-[4px] mb-[16px]">
+                <input type="email" placeholder="Enter Email" class="text-[rgba(7,45,75,.3)] text-[15px] leading-[18px] outline-none pl-[14px] bg-transparent">
+            </div>
+
+            <button class="bg-[#2F9FF8] rounded-[4px] px-[51px] font-rob text-[15px] leading-[18px] text-white py-[10px]">
+                Subscribe
+            </button>
+        </div>
+    </div>
+</body>
+</html>
